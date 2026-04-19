@@ -1,0 +1,16 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { NQueensVisualizer } from "@/components/NQueensVisualizer";
+
+export const Route = createFileRoute("/")({
+  component: NQueensVisualizer,
+  head: () => ({
+    meta: [
+      { title: "N-Queens Visualizer — Backtracking Algorithm" },
+      {
+        name: "description",
+        content:
+          "Interactive step-by-step visualizer for the N-Queens problem using backtracking. Watch queens being placed, conflicts highlighted, and solutions emerge.",
+      },
+    ],
+  }),
+});
